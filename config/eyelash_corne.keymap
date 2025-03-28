@@ -77,7 +77,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "EXTRA";
             bindings = <
 &trans  &trans     &kp PLUS     &kp LBRC   &kp RBRC    &trans                                        &mmv MOVE_UP						&kp K_MUTE       &kp K_VOL_DN     &kp UP           &kp K_VOL_UP     &kp PSCRN   &trans
 &trans  &trans     &kp KP_EQUAL &kp LPAR   &kp RPAR	   &trans                      &mmv MOVE_LEFT    &mkp LCLK    &mmv MOVE_RIGHT   	&kp K_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp K_NEXT  &trans
@@ -88,12 +88,12 @@
         };
 
         layer_3 {
-            display-name = "Fn";
+            display-name = "BT";
             bindings = <
-&trans     &trans     &trans    &trans     &trans      &trans                                        &mmv MOVE_UP						&trans       &trans         &trans        &trans       &trans     &trans
-&trans     &trans     &trans    &trans     &trans      &trans                      &mmv MOVE_LEFT    &mkp LCLK    &mmv MOVE_RIGHT   	&trans       &trans         &trans        &trans       &trans     &trans
-&trans     &trans     &trans    &trans     &trans      &trans		&kp C_MUTE                       &mmv MOVE_DOWN                     &trans       &trans         &trans        &trans       &trans     &trans
-                                &trans     &trans      &trans                                                                           &trans       &trans         &trans
+&trans  &trans     &trans    &trans     &trans      &trans                                        &mmv MOVE_UP						 &trans       &trans         &trans        &trans       &trans     &trans
+&trans  &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &trans           &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT   	 &trans       &trans         &trans        &trans       &trans     &trans
+&trans  &bt BT_CLR   &bt BT_CLR_ALL  &trans        &trans        &trans		&kp C_MUTE            &mmv MOVE_DOWN                     &trans       &trans         &trans        &trans       &trans     &trans
+                                     &trans        &trans        &trans                                                                           &trans         &trans        &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
