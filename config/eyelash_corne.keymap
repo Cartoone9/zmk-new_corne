@@ -41,8 +41,8 @@
 	      #binding-cells = <0>;
 	      bindings = <&kp LALT_DOWN>, <&kp TAB>, <&kp LALT_UP>;
 	    };
-	  };
 	};
+
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
