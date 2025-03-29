@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   BASE:
-  - '&alt_tab'
+  - ALT-TAB
   - Q
   - W
   - E
