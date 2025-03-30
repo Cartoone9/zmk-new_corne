@@ -37,10 +37,10 @@
 / {
     combos {
         compatible = "zmk,combos";
-		combo_df_numpad {
+        combo_kj_esc {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <13 14>; // J and K positions
-            bindings = <&lt numpad_layer>; // Outputs ESC when pressed together
+            key-positions = <23 24>; // J and K positions
+            bindings = <&kp ESC>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
     };
