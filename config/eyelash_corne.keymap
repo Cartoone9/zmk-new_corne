@@ -46,7 +46,7 @@
 		combo_df_numpad {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
             key-positions = <13 14>; // J and K positions
-            bindings = <&lt NUMPAD>; // Outputs ESC when pressed together
+            bindings = <&lt numpad_layer>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
     };
