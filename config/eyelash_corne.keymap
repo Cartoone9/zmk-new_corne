@@ -14,8 +14,7 @@
 #define BASE	0
 #define SIGN	1
 #define CODE	2
-#define NUMPAD	3
-#define BLT		4
+#define BLT		3
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -76,7 +75,7 @@
 &kp ESC    &kp Q     &kp W      &kp E     &kp R		  &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P     &kp DEL
 &kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                                &kp LGUI  &kp LSHIFT        &lt NUMBER SPACE                                                   &lt EXTRA BSPC  &mt RSHIFT ENTER  &kp LALT
+                                &kp LGUI  &kp LSHIFT  &lt NUMBER SPACE                                                   &lt EXTRA BSPC  &mt RSHIFT ENTER  &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
