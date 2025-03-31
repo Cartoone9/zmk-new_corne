@@ -15,7 +15,8 @@
 #define SIGN	1
 #define CODE	2
 #define NUM		3
-#define BLT		4
+#define FN		4
+#define BLT		5
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -47,6 +48,12 @@
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
             key-positions = <16 17>; // J and K positions
             bindings = <&lt NUM>; // Outputs ESC when pressed together
+            layers = <0>; // Only active on the base layer (optional)
+        };
+        combo_cv_numpad {
+            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+            key-positions = <31 32>; // J and K positions
+            bindings = <&lt FN>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
     };
@@ -91,8 +98,8 @@
             display-name = "SIGN";
             bindings = <
 &kp F1     &kp F2     &kp F3    &kp F4     &kp F5      &kp F6                                 &none						    &kp F7           &kp F8           &kp F9           &kp F10           &kp F11    &kp F12
-&kp TILDE  &kp EXCL   &kp AT    &kp HASH   &kp DOLLAR  &kp PERCENT                 &none      &none    &none   	            &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR   &kp UNDER
-&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4      &kp N5		    &none                 &none                         &kp N6           &kp N7           &kp N8           &kp N9            &kp N0     &kp MINUS
+&none      &kp EXCL   &kp AT    &kp HASH   &kp DOLLAR  &kp PERCENT                 &none      &none    &none   	            &kp CARET        &kp AMPS         &kp STAR         &none		     &none      &none
+&none      &none      &none   	&none  	   &none       &none		    &none                     &none                     &none			 &none			  &none			   &none			 &none      &none
                                 &trans     &trans      &trans                                                               &lt BLT BSPC	 &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -116,6 +123,17 @@
 &none     &none     &none   	 &none  	 &none	     &none                           &none    &none    &none   	        &none       &kp N4     &kp N5     &kp N6     &none    &none
 &none     &none     &none   	 &none  	 &none       &none		    &none                     &none                     &none       &kp N1     &kp N2     &kp N3     &none    &none
                                  &none       &none       &none                                                              &kp BSPC    &kp N0     &none
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        fn_layer {
+            display-name = "FN";
+            bindings = <
+&none     &none     &none		 &none		 &none       &none                                    &none					    &none       &kp F7     &kp F8     &kp F9     &none    &none
+&none     &none     &none   	 &none  	 &none	     &none                           &none    &none    &none   	        &none       &kp F4     &kp F5     &kp F6     &none    &none
+&none     &none     &none   	 &none  	 &none       &none		    &none                     &none                     &none       &kp F1     &kp F2     &kp F3     &none    &none
+                                 &none       &none       &none                                                              &none       &none      &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
