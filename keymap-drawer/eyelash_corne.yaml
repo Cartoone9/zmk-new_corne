@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - LGUI
-  - $$mdi:apple-keyboard-shift$$
+  - '&td0'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', h: CODE}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
