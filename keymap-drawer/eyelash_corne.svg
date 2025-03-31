@@ -546,9 +546,9 @@ rect.held, rect.combo.held {
 <text x="924" y="161" class="combo tap layer-activator">BLT</text>
 </a></g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="742" y="18" width="28" height="26" class="combo"/>
-<text x="756" y="31" class="combo tap">=</text>
-<text x="756" y="20" class="combo shifted">+</text>
+<rect rx="6" ry="6" x="686" y="25" width="28" height="26" class="combo"/>
+<text x="700" y="38" class="combo tap">=</text>
+<text x="700" y="27" class="combo shifted">+</text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="686" y="81" width="28" height="26" class="combo"/>
@@ -558,6 +558,12 @@ rect.held, rect.combo.held {
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="686" y="137" width="28" height="26" class="combo"/>
 <text x="700" y="150" class="combo tap">_</text>
+</g>
+<g class="combo combopos-7">
+<path d="M728,91 l-37,4" class="combo"/>
+<path d="M728,91 l37,-4" class="combo"/>
+<rect rx="6" ry="6" x="714" y="78" width="28" height="26" class="combo"/>
+<text x="728" y="91" class="combo tap">+</text>
 </g>
 </g>
 </g>
