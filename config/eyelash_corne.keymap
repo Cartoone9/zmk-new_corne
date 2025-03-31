@@ -62,51 +62,51 @@
             bindings = <&mo BLT>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
-        combo_yu_egual {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <7 8>; // C and V positions
-            bindings = <&kp EQUAL>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_hj_minus {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <22 23>; // C and V positions
-            bindings = <&kp MINUS>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_nm_under {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <36 37>; // C and V positions
-            bindings = <&kp UNDER>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_hjk_plus {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <22 23 24>; // C and V positions
-            bindings = <&kp PLUS>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_rt_tilde {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <4 5>; // C and V positions
-            bindings = <&kp TILDE>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_fg_grave {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <17 18>; // C and V positions
-            bindings = <&kp GRAVE>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
+//        combo_yu_egual {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <7 8>; // C and V positions
+//            bindings = <&kp EQUAL>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
+//        combo_hj_minus {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <22 23>; // C and V positions
+//            bindings = <&kp MINUS>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
+//        combo_nm_under {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <36 37>; // C and V positions
+//            bindings = <&kp UNDER>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
+//        combo_hjk_plus {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <22 23 24>; // C and V positions
+//            bindings = <&kp PLUS>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
+//        combo_rt_tilde {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <4 5>; // C and V positions
+//            bindings = <&kp TILDE>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
+//        combo_fg_grave {
+//            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//            key-positions = <17 18>; // C and V positions
+//            bindings = <&kp GRAVE>; // Outputs ESC when pressed together
+//            layers = <0>; // Only active on the base layer (optional)
+//        };
     };
 
 	behaviors {
-		meh: meh_behavior {
-    	    compatible = "zmk,behavior-mod-morph";
-    	    label = "MEH_MODS";
-    	    #binding-cells = <0>;
-    	    mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
-    	};
+// 		meh: meh_behavior {
+//    	    compatible = "zmk,behavior-mod-morph";
+//    	    label = "MEH_MODS";
+//    	    #binding-cells = <0>;
+//    	    mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+//    	};
 	
 	    td0: td_shift_caps {
 	        compatible = "zmk,behavior-tap-dance";
@@ -136,7 +136,7 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-&meh       &kp Q     &kp W      &kp E     &kp R		  &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P     &kp DEL
+&kp ESC       &kp Q     &kp W      &kp E     &kp R		  &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P     &kp DEL
 &kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                                 &kp LGUI  &td0        &lt CODE SPACE											         &lt EXTRA BSPC	 &mt RSHIFT ENTER  &kp LALT
