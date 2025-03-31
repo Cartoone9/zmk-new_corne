@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   BASE:
-  - '&meh'
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -306,22 +306,4 @@ combos:
   l: [BASE]
 - p: [40, 41]
   k: BLT
-  l: [BASE]
-- p: [7, 8]
-  k: {t: '=', s: +}
-  l: [BASE]
-- p: [22, 23]
-  k: {t: '-', s: _}
-  l: [BASE]
-- p: [36, 37]
-  k: _
-  l: [BASE]
-- p: [22, 23, 24]
-  k: +
-  l: [BASE]
-- p: [4, 5]
-  k: '~'
-  l: [BASE]
-- p: [17, 18]
-  k: {t: '`', s: '~'}
   l: [BASE]
