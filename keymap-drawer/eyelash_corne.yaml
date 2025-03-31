@@ -249,3 +249,6 @@ combos:
 - p: [23, 24]
   k: $$mdi:keyboard-esc$$
   l: [BASE]
+- p: [13, 14]
+  k: '&lt 3'
+  l: [BASE]
