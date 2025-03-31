@@ -129,7 +129,7 @@
 &none     &kp CARET &kp DOLLAR   &kp LBRC   &kp RBRC     &kp PERCENT                              &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
 &none     &kp STAR  &kp AMPS     &kp LPAR   &kp RPAR	 &kp EXCL                        &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
 &none     &none     &kp HASH     &kp LBKT   &kp RBKT     &kp AT		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
-                                 &trans     &trans       &trans																&kp BSPC         &trans           &trans
+                                 &trans     &trans       &trans																&trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -137,10 +137,10 @@
         numpad_layer {
             display-name = "NUM";
             bindings = <
-&none     &none     &none		 &none		 &none       &none                                    &none					    &none       &kp N7     &kp N8     &kp N9     &none    &none
-&none     &none     &none   	 &none  	 &none	     &none                           &none    &none    &none   	        &none       &kp N4     &kp N5     &kp N6     &none    &none
-&none     &none     &none   	 &none  	 &none       &none		    &none                     &none                     &none       &kp N1     &kp N2     &kp N3     &none    &none
-                                 &none       &none       &none                                                              &kp BSPC    &kp N0     &none
+&none     &none     &none		 &none		 &none       &none                                    &none					    &none       &kp KP_N7     &kp KP_N8     &kp KP_N9     &none    &none
+&none     &none     &none   	 &none  	 &none	     &none                           &none    &none    &none   	        &none       &kp KP_N4     &kp KP_N5     &kp KP_N6     &none    &none
+&none     &none     &none   	 &none  	 &none       &none		    &none                     &none                     &none       &kp KP_N1     &kp KP_N2     &kp KP_N3     &none    &none
+                                 &none       &none       &none                                                              &kp BSPC    &kp KP_N0     &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
