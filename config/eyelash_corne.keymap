@@ -138,9 +138,9 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp CARET &kp DOLLAR   &kp LBRC   &kp RBRC     &kp PERCENT                              &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
+&none     &kp CARET &kp DOLLAR   &kp LBKT   &kp RBKT     &kp PERCENT                              &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
 &none     &kp STAR  &kp AMPS     &kp LPAR   &kp RPAR	 &kp EXCL                        &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
-&none     &none     &kp HASH     &kp LBKT   &kp RBKT     &kp AT		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
+&none     &none     &kp HASH     &kp LBRC   &kp RBRC     &kp AT		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
                                  &trans     &trans       &trans																&trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
