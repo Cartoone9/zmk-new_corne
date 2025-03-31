@@ -79,10 +79,22 @@
             bindings = <&kp UNDER>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
-        combo_hjk_under {
+        combo_hjk_plus {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
             key-positions = <22 23 24>; // C and V positions
             bindings = <&kp PLUS>; // Outputs ESC when pressed together
+            layers = <0>; // Only active on the base layer (optional)
+        };
+        combo_fg_tilde {
+            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+            key-positions = <17 18>; // C and V positions
+            bindings = <&kp TILDE>; // Outputs ESC when pressed together
+            layers = <0>; // Only active on the base layer (optional)
+        };
+        combo_fg_grave {
+            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+            key-positions = <5 6>; // C and V positions
+            bindings = <&kp GRAVE>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
     };
