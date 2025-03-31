@@ -46,14 +46,14 @@
         };
         combo_df_numpad {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <16 17>; // J and K positions
-            bindings = <&lt NUM>; // Outputs ESC when pressed together
+            key-positions = <16 17>; // D and F positions
+            bindings = <&mo NUM>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
         combo_cv_numpad {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <31 32>; // J and K positions
-            bindings = <&lt FN>; // Outputs ESC when pressed together
+            key-positions = <31 32>; // C and V positions
+            bindings = <&mo FN>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
     };
