@@ -13,9 +13,10 @@
 
 #define BASE	0
 #define CODE	1
-#define NUM		2
-#define FN		3
-#define BLT		4
+#define EXTRA	2
+#define NUM		3
+#define FN		4
+#define BLT		5
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -130,7 +131,7 @@
 &kp ESC    &kp Q     &kp W      &kp E     &kp R		  &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P     &kp DEL
 &kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                                &kp LGUI  &td0        &kp SPACE													         &lt CODE BSPC	 &mt RSHIFT ENTER  &kp LALT
+                                &kp LGUI  &td0        &lt CODE SPACE											         &lt EXTRA BSPC	 &mt RSHIFT ENTER  &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -138,10 +139,21 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp CARET &kp DOLLAR   &kp LBKT   &kp RBKT     &kp PERCENT                              &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
-&none     &kp STAR  &kp AMPS     &kp LPAR   &kp RPAR	 &kp EXCL                        &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
-&none     &none     &kp HASH     &kp LBRC   &kp RBRC     &kp AT		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
-                                 &trans     &trans       &trans																&trans           &trans           &trans
+&none     &none    &kp TILDE     &kp DOLLAR  &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &kp LBKT   &kp RBKT  &kp STAR   &none   &none
+&none     &none    &kp EXCL      &kp AT      &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp LPAR   &kp RPAR  &kp PLUS   &none   &none
+&none     &none    &kp GRAVE     &kp HASH    &kp CARET    &kp FSLH		    &none                  &none                     		&kp UNDER   &kp LBRC   &kp RBRC  &none      &none   &none
+                                 &trans      &trans       &trans																    &trans      &trans     &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        extra_layer {
+            display-name = "EXTRA";
+            bindings = <
+&none     &none       &none     &none      &none      &none                                   &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
+&none     &none       &none     &none      &none	  &none                          &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
+&none     &none       &none     &none      &none      &none		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
+                                &trans     &trans     &trans															&trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
