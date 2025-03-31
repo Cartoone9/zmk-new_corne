@@ -12,8 +12,8 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE	0
-#define SIGN	1
-#define CODE	2
+#define NUMBER	1
+#define EXTRA	2
 #define BLT		3
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
@@ -81,7 +81,7 @@
         };
 
         lower_layer {
-            display-name = "SIGN";
+            display-name = "NUM";
             bindings = <
 &kp F1     &kp F2     &kp F3    &kp F4     &kp F5      &kp F6                                 &none						    &kp F7           &kp F8           &kp F9           &kp F10           &kp F11    &kp F12
 &kp TILDE  &kp EXCL   &kp AT    &kp HASH   &kp DOLLAR  &kp PERCENT                 &none      &none    &none   	            &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR   &kp UNDER
@@ -92,7 +92,7 @@
         };
 
         raise_layer {
-            display-name = "CODE";
+            display-name = "EXTRA";
             bindings = <
 &none     &none     &kp PLUS     &kp LBRC   &kp RBRC     &none                                    &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
 &none     &none     &kp EQUAL    &kp LPAR   &kp RPAR	 &none                           &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
@@ -102,7 +102,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        bt_layer {
+        layer_3 {
             display-name = "BLT";
             bindings = <
 &none  &none        &none           &none         &none         &none                            &none						&none       &none         &none        &none       &none     &none
