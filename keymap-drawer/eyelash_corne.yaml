@@ -58,7 +58,7 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
-  - ':'
+  - '&double_colon'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - '*'
