@@ -107,6 +107,11 @@
 	        tapping-term-ms = <150>;
 	        bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
 	    };
+		double_colon: double_colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp COLON>;
+        };
 	};
 
     rgb_encoder: rgb_encoder {
@@ -121,12 +126,6 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <100>;
     };
-    macros {
-        double_colon: double_colon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <1>; // Must be 0
-            bindings = <&kp COLON &kp COLON>;
-        };
 
     keymap {
         compatible = "zmk,keymap";
