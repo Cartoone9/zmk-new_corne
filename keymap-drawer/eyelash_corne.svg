@@ -566,10 +566,8 @@ rect.held, rect.combo.held {
 <text x="728" y="91" class="combo tap">+</text>
 </g>
 <g class="combo combopos-8">
-<path d="M427,41 l-100,0" class="combo"/>
-<path d="M427,41 l100,0" class="combo"/>
-<rect rx="6" ry="6" x="413" y="28" width="28" height="26" class="combo"/>
-<text x="427" y="41" class="combo tap">~</text>
+<rect rx="6" ry="6" x="266" y="25" width="28" height="26" class="combo"/>
+<text x="280" y="38" class="combo tap">~</text>
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="266" y="81" width="28" height="26" class="combo"/>
