@@ -101,18 +101,18 @@
     };
 
 	behaviors {
-	    meh: meh_behavior {
-	        compatible = "zmk,behavior-mods";
-	        label = "MEH";
-	        #binding-cells = <0>;
-	        mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
-	    };
+		meh: meh_behavior {
+    	    compatible = "zmk,behavior-mod-morph";
+    	    label = "MEH_MODS";
+    	    #binding-cells = <0>;
+    	    mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+    	};
 	
 	    td0: td_shift_caps {
 	        compatible = "zmk,behavior-tap-dance";
 	        label = "TD_SHIFT_CAPS";
 	        #binding-cells = <0>;
-	        tapping-term-ms = <200>;
+	        tapping-term-ms = <150>;
 	        bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
 	    };
 	};
