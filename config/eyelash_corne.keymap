@@ -147,10 +147,10 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &none    &kp TILDE     &kp DOLLAR  &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &kp LBKT   &kp RBKT  &kp STAR   &none   &none
-&none     &none    &kp EXCL      &kp AT      &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp LPAR   &kp RPAR  &kp PLUS   &none   &none
-&none     &none    &kp GRAVE     &kp HASH    &kp CARET    &kp FSLH		    &none                  &none                     		&kp UNDER   &kp LBRC   &kp RBRC  &none      &none   &none
-                                 &trans      &trans       &trans																    &trans      &trans     &trans
+&none     &none    &kp TILDE     &kp DOLLAR  &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &kp COLON	&kp LBKT   &kp RBKT  &kp STAR   &none   
+&none     &none    &kp EXCL      &kp AT      &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp COLON	&kp LPAR   &kp RPAR  &kp PLUS   &none   
+&none     &none    &kp GRAVE     &kp HASH    &kp CARET    &kp FSLH		    &none                  &none                     		&kp UNDER   &kp SEMI	&kp LBRC   &kp RBRC  &none      &none   
+                                 &trans      &trans       &trans																    &trans      &trans      &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
