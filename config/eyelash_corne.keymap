@@ -55,9 +55,9 @@
             bindings = <&mo FN>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
-        combo_zx_numpad {
+        combo_zx_blt {
             timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <29 30>; // C and V positions
+            key-positions = <40 41>; // C and V positions
             bindings = <&mo BLT>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
