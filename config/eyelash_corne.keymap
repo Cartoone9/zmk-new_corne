@@ -14,9 +14,10 @@
 #define BASE	0
 #define CODE	1
 #define EXTRA	2
-#define NUM		3
-#define FN		4
-#define BLT		5
+#define NAV		3
+#define NUM		4
+#define FN		5
+#define BLT		6
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -61,18 +62,18 @@
             bindings = <&mo BLT>; // Outputs ESC when pressed together
             layers = <0>; // Only active on the base layer (optional)
         };
-        combo_yu_dquote {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <7 8>; // C and V positions
-            bindings = <&kp DQT>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
-        combo_hj_squote {
-            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
-            key-positions = <22 23>; // C and V positions
-            bindings = <&kp SQT>; // Outputs ESC when pressed together
-            layers = <0>; // Only active on the base layer (optional)
-        };
+//       combo_yu_dquote {
+//           timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//           key-positions = <7 8>; // C and V positions
+//           bindings = <&kp DQT>; // Outputs ESC when pressed together
+//           layers = <0>; // Only active on the base layer (optional)
+//       };
+//       combo_hj_squote {
+//           timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+//           key-positions = <22 23>; // C and V positions
+//           bindings = <&kp SQT>; // Outputs ESC when pressed together
+//           layers = <0>; // Only active on the base layer (optional)
+//       };
 //        combo_nm_under {
 //            timeout-ms = <50>; // Time window to press both keys (adjust as needed)
 //            key-positions = <36 37>; // C and V positions
@@ -186,9 +187,9 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-&big_menu  &kp Q     &kp W      &kp E     &kp R	      &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P      &kp DEL
-&kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &none      &none
-&kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp QMARK  &none
+&big_menu  &kp Q     &kp W      &kp E     &kp R	      &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P       &kp DEL
+&kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp COLON   &none
+&kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp SEMI    &none
                                 &kp LGUI  &td0        &lt CODE SPACE											         &lt EXTRA BSPC	 &mt RSHIFT ENTER  &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -197,9 +198,9 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp TILDE	 &kp LT		  &kp GT      &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &double_colon	&kp LBKT   &kp RBKT  &kp STAR   &none   
-&none     &kp GRAVE	 &kp HASH     &kp AT      &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp COLON		&kp LPAR   &kp RPAR  &kp PLUS   &none   
-&none     &none		 &kp CARET	  &kp DOLLAR  &kp EXCL     &kp FSLH		    &none                   &none                     		&kp UNDER   &kp SEMI		&kp LBRC   &kp RBRC  &none      &none   
+&none     &kp TILDE	 &kp LT		  &kp GT      &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &kp STAR		&kp LBKT   &kp RBKT  &kp PLUS		&none   
+&none     &kp HASH	 &kp EXCL	  &kp QMARK	  &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp DQT			&kp LPAR   &kp RPAR  &double_colon	&none   
+&none     &kp GRAVE	 &kp CARET	  &kp DOLLAR  &kp AT       &kp FSLH		    &none                   &none                     		&kp UNDER   &kp SQT			&kp LBRC   &kp RBRC  &none			&none   
                                   &trans      &trans       &trans																    &trans      &trans			&trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -209,8 +210,19 @@
             display-name = "EXTRA";
             bindings = <
 &none     &none       &none     &none      &none      &none                                   &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
-&none     &none       &desk_1   &desk_2    &desk_3	  &desk_4                          &none  &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
+&none     &none       &none     &none      &none	  &none                          &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
 &none     &none       &none     &none      &none      &none		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
+                                &trans     &trans     &trans															&trans           &trans           &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        nav_layer {
+            display-name = "NAV";
+            bindings = <
+&none     &none       &none     &none      &none      &none                                   &none					    &none			 &none			  &none		 &none		 &none		 &none
+&none     &none       &desk_1   &desk_2    &desk_3	  &desk_4                          &none  &none    &none   	        &none			 &none			  &none		 &none		 &none		 &none
+&none     &none       &none     &none      &none      &none		    &none                     &none                     &none			 &none			  &none		 &none		 &none		 &none
                                 &trans     &trans     &trans															&trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
