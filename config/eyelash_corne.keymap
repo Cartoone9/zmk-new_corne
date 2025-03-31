@@ -166,6 +166,14 @@
 				<&macro_press &kp 5>,
 				<&macro_press &kp LALT>;
         };
+		alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp TAB>,
+				<&macro_press &kp LALT>;
+        };
 	};
 
     rgb_encoder: rgb_encoder {
@@ -188,7 +196,7 @@
             display-name = "BASE";
             bindings = <
 &big_menu  &kp Q     &kp W      &kp E     &kp R	      &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P       &kp DEL
-&kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp COLON   &none
+&kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp COLON   &alt_tab
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp SEMI    &none
                                 &kp LGUI  &td0        &lt CODE SPACE											         &lt EXTRA BSPC	 &mt RSHIFT ENTER  &kp LALT
             >;
