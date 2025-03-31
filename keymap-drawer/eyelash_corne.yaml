@@ -28,7 +28,7 @@ layers:
   - K
   - L
   - ':'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&alt_tab'
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
