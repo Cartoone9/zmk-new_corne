@@ -238,8 +238,8 @@
 				<&macro_press &kp TAB>,
 				<&macro_press &kp LALT>;
         };
-		acute: dead_key_acute { compatible = "zmk,behavior-dead-key"; binding = <&de_acute>; };
-		grave: dead_key_grave { compatible = "zmk,behavior-dead-key"; binding = <&de_grave>; };
+		acute: dead_key_acute { compatible = "zmk,behavior-dead-key"; #binding-cells = <0>; binding = <&de_acute>; };
+		grave: dead_key_grave { compatible = "zmk,behavior-dead-key"; #binding-cells = <0>; binding = <&de_grave>; };
 
 		e_acute: e_acute {
             compatible = "zmk,behavior-macro";
