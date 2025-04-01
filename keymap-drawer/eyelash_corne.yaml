@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: ;, s: ':'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '5'
   - LGUI
   - '&td0'
   - {t: '$$mdi:keyboard-space$$', h: CODE}
