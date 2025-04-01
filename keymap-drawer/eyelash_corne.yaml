@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: ;, s: ':'}
-  - '5'
+  - END
   - LGUI
   - '&td0'
   - {t: '$$mdi:keyboard-space$$', h: CODE}
@@ -355,4 +355,7 @@ combos:
   l: [BASE]
 - p: [40, 41]
   k: BLT
+  l: [BASE]
+- p: [4, 5]
+  k: '&f_del'
   l: [BASE]
