@@ -98,6 +98,12 @@
 //            bindings = <&kp GRAVE>; // Outputs ESC when pressed together
 //            layers = <0>; // Only active on the base layer (optional)
 //        };
+		  combo_f_del {
+       	      timeout-ms = <50>; // Time window to press both keys (adjust as needed)
+       	      key-positions = <4 5>; // C and V positions
+       	      bindings = <&f_del>; // Outputs ESC when pressed together
+       	      layers = <0>; // Only active on the base layer (optional)
+       	  };
     };
 
 	behaviors {
@@ -123,6 +129,15 @@
             bindings = <&macro_press &kp LALT>,
 				<&macro_press &kp SPACE>,
 				<&macro_press &kp LALT>;
+        };
+
+		// forward delete :
+		f_del: f_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <50>;
+            bindings = <&kp RIGHT>,
+				<&kp BSPC>;
         };
 
 		// desktop shortcuts :
@@ -263,7 +278,7 @@
             bindings = <
 &big_menu  &kp Q     &kp W      &kp E     &kp R	      &kp T                                  &none                       &kp Y           &kp U			   &kp I      &kp O    &kp P       &kp DEL
 &kp TAB    &kp A     &kp S      &kp D     &kp F  	  &kp G                           &none  &none    &none              &kp H           &kp J         	   &kp K      &kp L    &kp COLON   &alt_tab
-&kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp SEMI    &kp FN
+&kp LCTRL  &kp Z     &kp X      &kp C     &kp V  	  &kp B            &none                 &none                       &kp N           &kp M  		   &kp COMMA  &kp DOT  &kp SEMI    &kp END
                                 &kp LGUI  &td0        &lt CODE SPACE											         &lt EXTRA BSPC	 &mt RSHIFT ENTER  &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
