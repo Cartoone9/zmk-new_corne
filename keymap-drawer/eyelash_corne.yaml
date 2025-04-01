@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   BASE:
-  - '&big_menu'
+  - $$mdi:backspace-reverse-outline$$
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - $$mdi:backspace-reverse-outline$$
+  - '&big_menu'
   - $$mdi:keyboard-tab$$
   - A
   - S
@@ -355,7 +355,4 @@ combos:
   l: [BASE]
 - p: [40, 41]
   k: BLT
-  l: [BASE]
-- p: [4, 5]
-  k: '&f_del'
   l: [BASE]
