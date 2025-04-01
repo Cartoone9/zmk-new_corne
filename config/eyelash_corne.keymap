@@ -166,6 +166,70 @@
 				<&macro_press &kp 5>,
 				<&macro_press &kp LALT>;
         };
+		alt_up: alt_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp UP>,
+				<&macro_press &kp LALT>;
+        };
+		alt_right: alt_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp RIGHT>,
+				<&macro_press &kp LALT>;
+        };
+		alt_down: alt_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp DOWN>,
+				<&macro_press &kp LALT>;
+        };
+		alt_left: alt_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp LEFT>,
+				<&macro_press &kp LALT>;
+        };
+		alt_U: alt_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp U>,
+				<&macro_press &kp LALT>;
+        };
+		alt_I: alt_I {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp I>,
+				<&macro_press &kp LALT>;
+        };
+		alt_J: alt_J {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp J>,
+				<&macro_press &kp LALT>;
+        };
+		alt_K: alt_K {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+			wait-ms = <30>;
+            bindings = <&macro_press &kp LALT>,
+				<&macro_press &kp K>,
+				<&macro_press &kp LALT>;
+        };
 		alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -206,10 +270,10 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp TILDE	 &kp LT		  &kp GT      &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL   &kp STAR		&kp LBKT   &kp RBKT  &kp PLUS		&none   
-&none     &kp HASH	 &kp EXCL	  &kp QMARK	  &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   &kp DQT			&kp LPAR   &kp RPAR  &double_colon	&none   
-&none     &kp GRAVE	 &kp CARET	  &kp DOLLAR  &kp AT       &kp FSLH		    &none                   &none                     		&kp UNDER   &kp SQT			&kp LBRC   &kp RBRC  &none			&none   
-                                  &trans      &trans       &trans																    &trans      &trans			&trans
+&none     &kp TILDE	 &kp LT		  &kp GT      &kp PERCENT  &kp BSLH                                 &none					    	&kp EQUAL		  &kp STAR		    &kp LBKT   &kp RBKT  &kp PLUS		&none   
+&none     &kp HASH	 &kp EXCL	  &kp QMARK	  &kp AMPS     &kp PIPE                        &none    &none    &none   	        	&kp MINUS   	  &kp DQT			&kp LPAR   &kp RPAR  &double_colon	&none   
+&none     &kp GRAVE	 &kp CARET	  &kp DOLLAR  &kp AT       &kp FSLH		    &none                   &none                     		&kp UNDER   	  &kp SQT			&kp LBRC   &kp RBRC  &none			&none   
+                                  &trans      &trans       &trans																    &lt NAV BSPC      &trans			&trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -220,7 +284,7 @@
 &none     &none       &none     &none      &none      &none                                   &none					    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
 &none     &none       &none     &none      &none	  &none                          &none    &none    &none   	        &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
 &none     &none       &none     &none      &none      &none		    &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
-                                &trans     &trans     &trans															&trans           &trans           &trans
+                                &trans     &trans     &lt NAV SPACE														&trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -228,10 +292,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &none     &none      &none      &none                                   &none					    &none			 &none			  &none		 &none		 &none		 &none
-&none     &none       &desk_1   &desk_2    &desk_3	  &desk_4                          &none  &none    &none   	        &none			 &none			  &none		 &none		 &none		 &none
-&none     &none       &none     &none      &none      &none		    &none                     &none                     &none			 &none			  &none		 &none		 &none		 &none
-                                &trans     &trans     &trans															&trans           &trans           &trans
+&none     &none       &none     &none      &none      &none                                   &none					    &none			 &alt_U		      &alt_up		 &alt_I		     &none		 &none
+&none     &none       &desk_1   &desk_2    &desk_3	  &desk_4                          &none  &none    &none   	        &none			 &alt_left		  &alt_down		 &alt_right	     &none		 &none
+&none     &none       &none     &none      &none      &none		    &none                     &none                     &none			 &alt_J		      &none		     &alt_J		     &none		 &none
+                                &none      &none      &none																&none			 &none            &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
