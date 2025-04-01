@@ -62,12 +62,6 @@
             bindings = <&mo BLT>;
             layers = <0>;
         };
-        combo_f_del {
-            timeout-ms = <50>;
-            key-positions = <4 5>; // F and G positions (corrected from C and V comment)
-            bindings = <&f_del>;
-            layers = <0>;
-        };
     };
 
     behaviors {
@@ -240,7 +234,7 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-&big_menu  &kp Q     &kp W      &kp E     &kp R          &kp T                                  &none                       &kp Y           &kp U             &kp I      &kp O    &kp P       &kp DEL
+&kp DEL    &kp Q     &kp W      &kp E     &kp R          &kp T                                  &none                       &kp Y           &kp U             &kp I      &kp O    &kp P       &big_menu
 &kp TAB    &kp A     &kp S      &kp D     &kp F          &kp G                           &none  &none    &none              &kp H           &kp J             &kp K      &kp L    &kp COLON   &alt_tab
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V          &kp B            &none                 &none                       &kp N           &kp M             &kp COMMA  &kp DOT  &kp SEMI    &kp END
                                 &kp LGUI  &td0        &lt CODE SPACE                                             &lt EXTRA BSPC     &mt RSHIFT ENTER  &kp LALT
