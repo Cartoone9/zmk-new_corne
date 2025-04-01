@@ -240,26 +240,6 @@
 				<&macro_press &kp TAB>,
 				<&macro_press &kp LALT>;
         };
-
-		// accents :
-		e_acute: e_acute {
-		    compatible = "zmk,behavior-macro";
-		    #binding-cells = <0>;
-		    wait-ms = <30>;
-		    bindings = <&kp U E9>;  // Unicode for é
-		};
-		e_grave: e_grave {
-		    compatible = "zmk,behavior-macro";
-		    #binding-cells = <0>;
-		    wait-ms = <30>;
-		    bindings = <&kp U E8>;  // Unicode for é
-		};
-		a_grave: a_grave {
-		    compatible = "zmk,behavior-macro";
-		    #binding-cells = <0>;
-		    wait-ms = <30>;
-		    bindings = <&kp U E0>;  // Unicode for é
-		};
 	};
 
     rgb_encoder: rgb_encoder {
