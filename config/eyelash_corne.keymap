@@ -245,9 +245,9 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp TILDE   &kp LT        &kp GT      &kp PERCENT  &kp BSLH                                 &none                        &kp EQUAL        &kp STAR          &kp LBKT   &kp RBKT  &kp PLUS     &none   
-&none     &kp HASH    &kp EXCL      &kp QMARK   &kp AMPS     &kp PIPE                        &none    &none    &none                &kp MINUS        &kp DQT          &kp LPAR   &kp RPAR  &double_colon &none   
-&none     &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT       &kp FSLH            &none                   &none                        &kp UNDER        &kp SQT          &kp LBRC   &kp RBRC  &none         &none   
+&none     &kp TILDE   &kp LT        &kp GT      &kp PERCENT  &kp BSLH                                 &none                        &kp EQUAL        &kp DQT          &kp LBKT   &kp RBKT  &kp PLUS     &none   
+&none     &kp HASH    &kp EXCL      &kp QMARK   &kp AMPS     &kp PIPE                        &none    &none    &none                &kp MINUS        &kp SQT          &kp LPAR   &kp RPAR  &double_colon &none   
+&none     &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT       &kp FSLH            &none                   &none                        &kp UNDER        &kp STAR         &kp LBRC   &kp RBRC  &none         &none   
                                   &trans      &trans       &trans                                                                   &lt NAV BSPC      &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
