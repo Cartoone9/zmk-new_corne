@@ -212,6 +212,14 @@
                 <&macro_tap &kp BSPC>,
                 <&macro_release &kp LALT>;
         };
+		alt_bspc_repeat: alt_bspc_repeat {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALT_BSPC_REPEAT";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            repeat-interval-ms = <100>;
+            bindings = <&alt_bspc_macro>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -255,9 +263,9 @@
         extra_layer {
             display-name = "EXTRA";
             bindings = <
-&none     &none       &none     &none     &none      &none                                   &none                    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
-&none     &none       &kp BSPC  &kp BSPC  &kp BSPC   &alt_bspc                     &none    &none    &none            &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
-&none     &none       &none     &none     &none      &none            &none                     &none                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
+&none     &none       &none     &none     &none      &none                                  &none                     &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
+&none     &none       &kp BSPC  &kp BSPC  &kp BSPC   &alt_bspc_repeat              &none    &none    &none            &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
+&none     &none       &none     &none     &none      &none            &none                 &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
                                 &trans    &trans     &lt NAV SPACE                                                    &trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
