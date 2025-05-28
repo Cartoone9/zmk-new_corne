@@ -204,13 +204,13 @@
                 <&macro_tap &kp TAB>,
                 <&macro_release &kp LALT>;
         };
-        ctrl_bspc: ctrl_bspc {
+        alt_bspc: alt_bspc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings = <&macro_press &kp LCTRL>,
+            bindings = <&macro_press &kp LALT>,
                 <&macro_tap &kp BSPC>,
-                <&macro_release &kp LCTRL>;
+                <&macro_release &kp LALT>;
         };
     };
 
@@ -256,9 +256,9 @@
             display-name = "EXTRA";
             bindings = <
 &none     &none       &none     &none     &none      &none                                   &none                    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
-&none     &none       &none     &kp BSPC  &kp BSPC   &ctrl_bspc                     &none    &none    &none           &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
+&none     &none       &kp BSPC  &kp BSPC  &kp BSPC   &alt_bspc                     &none    &none    &none            &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
 &none     &none       &none     &none     &none      &none            &none                     &none                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
-                                &trans     &trans     &lt NAV SPACE                                                   &trans           &trans           &trans
+                                &trans    &trans     &lt NAV SPACE                                                    &trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
