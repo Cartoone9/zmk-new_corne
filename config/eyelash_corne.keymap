@@ -69,7 +69,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHIFT_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
         double_colon: double_colon {
@@ -87,15 +87,6 @@
             bindings = <&macro_press &kp LALT>,
                 <&macro_tap &kp SPACE>,
                 <&macro_release &kp LALT>;
-        };
-
-        // forward delete
-        f_del: f_del {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&kp RIGHT>,
-                <&kp BSPC>;
         };
 
         // desktop shortcuts
@@ -245,9 +236,9 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&none     &kp TILDE   &kp LT        &kp GT      &kp PERCENT  &kp BSLH                                 &none                        &kp EQUAL        &kp DQT          &kp LBKT   &kp RBKT  &kp PLUS     &none   
+&none     &kp TILDE   &kp LT        &kp GT      &kp PERCENT  &kp BSLH                                 &none                         &kp EQUAL        &kp DQT          &kp LBKT   &kp RBKT  &kp PLUS     &none   
 &none     &kp HASH    &kp EXCL      &kp QMARK   &kp AMPS     &kp PIPE                        &none    &none    &none                &kp MINUS        &kp SQT          &kp LPAR   &kp RPAR  &double_colon &none   
-&none     &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT       &kp FSLH            &none                   &none                        &kp UNDER        &kp STAR         &kp LBRC   &kp RBRC  &none         &none   
+&none     &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT       &kp FSLH            &none                   &none                      &kp UNDER        &kp STAR         &kp LBRC   &kp RBRC  &none         &none   
                                   &trans      &trans       &trans                                                                   &lt NAV BSPC      &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -257,9 +248,9 @@
             display-name = "EXTRA";
             bindings = <
 &none     &none       &none     &none     &none      &none                                   &none                    &kp C_MUTE       &kp C_VOL_DN     &kp UP           &kp C_VOL_UP     &kp PSCRN     &none
-&none     &none       &none     &none     &none      &none                          &none    &none    &none                &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
-&none     &none       &none     &none     &none      &none            &none                     &none                     &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
-                                &trans     &trans     &lt NAV SPACE                                                &trans           &trans           &trans
+&none     &none       &none     &none     &none      &none                          &none    &none    &none           &kp C_PP         &kp LEFT         &kp DOWN         &kp RIGHT        &kp C_NEXT    &none
+&none     &none       &none     &none     &none      &none            &none                     &none                 &kp F13          &kp F14          &kp F15          &kp F16          &kp F17       &none
+                                &trans     &trans     &lt NAV SPACE                                                   &trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -268,8 +259,8 @@
             display-name = "NAV";
             bindings = <
 &none     &none       &none     &none      &none      &none                                   &none                    &none             &alt_U           &alt_up         &alt_I         &none         &none
-&none     &none       &desk_1   &desk_2    &desk_3    &desk_4                          &none  &none    &none                &none             &alt_left        &alt_down       &alt_right     &none         &none
-&none     &none       &none     &none      &none      &none            &none                     &none                     &none             &alt_J           &none           &alt_J         &none         &none
+&none     &none       &desk_1   &desk_2    &desk_3    &desk_4                          &none  &none    &none           &none             &alt_left        &alt_down       &alt_right     &none         &none
+&none     &none       &none     &none      &none      &none            &none                     &none                 &none             &alt_J           &none           &alt_J         &none         &none
                                 &none      &none      &none                                                            &none             &none            &none
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -289,10 +280,10 @@
         fn_layer {
             display-name = "FN";
             bindings = <
-&none     &none     &none      &none      &none       &none                                    &none                    &none       &kp F7     &kp F8     &kp F9     &none    &none
-&none     &none     &none      &none      &none       &none                           &none    &none    &none                &none       &kp F4     &kp F5     &kp F6     &none    &none
-&none     &none     &none      &none      &none       &none            &none                     &none                     &none       &kp F1     &kp F2     &kp F3     &none    &none
-                                 &none       &none       &none                                                              &none       &none      &none
+&none     &none     &none      &none      &none       &none                                    &none                         &none       &kp F7     &kp F8     &kp F9     &kp F12    &none
+&none     &none     &none      &none      &none       &none                           &none    &none    &none                &none       &kp F4     &kp F5     &kp F6     &kp F11    &none
+&none     &none     &none      &none      &none       &none            &none                     &none                       &none       &kp F1     &kp F2     &kp F3     &kp F10    &none
+                                 &none       &none       &none                                                               &none       &none      &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -301,9 +292,9 @@
             display-name = "BLT";
             bindings = <
 &none  &none        &none           &none         &none         &none                            &none                    &none       &none         &none        &none       &none     &none
-&none  &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4             &none   &none    &none                &none       &none         &none        &none       &none     &none
-&none  &bt BT_CLR   &bt BT_CLR_ALL  &none         &none         &none        &none                &none                      &none       &none         &none        &none       &none     &none
-                                    &none         &none         &none                                                       &none       &none         &none
+&none  &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4             &none   &none    &none           &none       &none         &none        &none       &none     &none
+&none  &bt BT_CLR   &bt BT_CLR_ALL  &none         &none         &none        &none                &none                   &none       &none         &none        &none       &none     &none
+                                    &none         &none         &none                                                     &none       &none         &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
