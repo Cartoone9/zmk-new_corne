@@ -10,13 +10,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-rgb
-      remote: zmkfirmware
-      revision: main
-      import: rgb/west.yml
-    - name: zmk-behaviors
-      remote: zmkfirmware
-      revision: main
-      import: behaviors/west.yml
   self:
     path: config
