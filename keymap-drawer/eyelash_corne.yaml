@@ -47,7 +47,7 @@ layers:
   - '&td0'
   - {t: '$$mdi:keyboard-space$$', h: CODE}
   - {t: '$$mdi:backspace$$', h: EXTRA}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&alt_bspc'
   - $$mdi:apple-keyboard-option$$
   CODE:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -132,7 +132,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&ctrl_bspc'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F13
@@ -346,6 +346,9 @@ layers:
 combos:
 - p: [23, 24]
   k: $$mdi:keyboard-esc$$
+  l: [BASE]
+- p: [37, 38]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [BASE]
 - p: [16, 17]
   k: NUM
