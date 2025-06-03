@@ -68,6 +68,12 @@
             bindings = <&mo FN>;
             layers = <0>;
         };
+        combo_sdf_fn {
+            timeout-ms = <50>;
+            key-positions = <15 16 17>; // S, D and F positions
+            bindings = <&mo FN>;
+            layers = <0>;
+        };
         combo_zx_blt {
             timeout-ms = <50>;
             key-positions = <40 41>; // Z and X positions
