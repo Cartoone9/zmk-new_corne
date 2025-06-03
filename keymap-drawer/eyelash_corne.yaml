@@ -350,6 +350,9 @@ combos:
 - p: [37, 38]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [BASE]
+- p: [23, 24, 25]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [BASE]
 - p: [16, 17]
   k: NUM
   l: [BASE]
