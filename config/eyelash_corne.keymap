@@ -44,9 +44,15 @@
             bindings = <&kp ESC>;
             layers = <0>;
         };
-        combo_mcomma_esc {
+        combo_mcomma_enter {
             timeout-ms = <50>;
             key-positions = <37 38>; // M and , positions
+            bindings = <&kp ENTER>;
+            layers = <0>;
+        };
+        combo_three_enter {
+            timeout-ms = <50>;
+            key-positions = <23 24 25>; // J, K, and L positions
             bindings = <&kp ENTER>;
             layers = <0>;
         };
