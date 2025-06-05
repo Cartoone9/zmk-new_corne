@@ -150,7 +150,7 @@
         };
 
         // alt combi
-        alt_up: alt_up {
+        win_up: win_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
@@ -158,29 +158,29 @@
                 <&macro_tap &kp UP>,
                 <&macro_release &kp LGUI>;
         };
-        alt_right: alt_right {
+        win_right: win_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
+            bindings = <&macro_press &kp LGUI>,
                 <&macro_tap &kp RIGHT>,
-                <&macro_release &kp LALT>;
+                <&macro_release &kp LGUI>;
         };
-        alt_down: alt_down {
+        win_down: win_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
+            bindings = <&macro_press &kp LGUI>,
                 <&macro_tap &kp DOWN>,
-                <&macro_release &kp LALT>;
+                <&macro_release &kp LGUI>;
         };
-        alt_left: alt_left {
+        win_left: win_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
+            bindings = <&macro_press &kp LGUI>,
                 <&macro_tap &kp LEFT>,
-                <&macro_release &kp LALT>;
+                <&macro_release &kp LGUI>;
         };
         alt_U: alt_U {
             compatible = "zmk,behavior-macro";
@@ -300,7 +300,7 @@
             display-name = "NAV";
             bindings = <
 &none     &none       &none     &none      &none      &none                                   &none                    &none             &alt_U           &none         &alt_I         &none         &none
-&none     &none       &desk_1   &desk_2    &desk_3    &desk_4                          &none  &none    &none           &alt_left         &alt_down        &alt_up       &alt_right     &none         &none
+&none     &none       &desk_1   &desk_2    &desk_3    &desk_4                          &none  &none    &none           &win_left         &win_down        &win_up       &win_right     &none         &none
 &none     &none       &none     &none      &none      &none            &none                     &none                 &none             &alt_J           &none         &alt_J         &none         &none
                                 &none      &none      &none                                                            &none             &none            &none
             >;
