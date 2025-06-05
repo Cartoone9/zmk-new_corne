@@ -170,10 +170,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&alt_left'
-  - '&alt_down'
-  - '&alt_up'
-  - '&alt_right'
+  - '&win_left'
+  - '&win_down'
+  - '&win_up'
+  - '&win_right'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
