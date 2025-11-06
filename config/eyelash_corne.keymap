@@ -204,7 +204,7 @@
             bindings = <&macro_press &kp LGUI>,
 				<&macro_press &kp LSHIFT>,
                 <&macro_tap &kp ENTER>,
-                <&macro_release &kp LSHIFT>;
+                <&macro_release &kp LSHIFT>,
                 <&macro_release &kp LGUI>;
         };
         win_up: win_up {
