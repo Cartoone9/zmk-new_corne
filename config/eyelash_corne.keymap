@@ -347,9 +347,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &none      &none      &none      &none                                   &none                   &none             &win_U           &none         &win_I         &none         &none
+&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &none             &win_U           &none         &win_I         &none         &none
 &none     &none       &desk_1    &desk_2    &desk_3    &desk_4                          &none  &none    &none          &win_left         &win_down        &win_up       &win_right     &none         &none
-&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4            &none             &none                   &none             &win_J           &win_enter    &win_K         &none         &none
+&none     &none       &none      &none      &none      &none                 &none             &none                   &none             &win_J           &win_enter    &win_K         &none         &none
                                  &none      &none      &none                                                           &none             &none            &none
             >;
             sensor-bindings = <&scroll_encoder>;
