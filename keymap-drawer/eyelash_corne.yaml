@@ -59,8 +59,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
   - '"'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - '{'
+  - '}'
   - +
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -88,8 +88,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
   - '*'
-  - '{'
-  - '}'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
