@@ -334,9 +334,9 @@
         code_layer {
             display-name = "CODE";
             bindings = <
-&trans    &kp TILDE   &kp LT        &kp GT      &kp PERCENT    &kp BSLH                                 &none                         &kp EQUAL        &kp DQT          &kp LBKT   &kp RBKT  &kp PLUS      &trans   
+&trans    &kp TILDE   &kp LT        &kp GT      &kp PERCENT    &kp BSLH                                 &none                         &kp EQUAL        &kp DQT          &kp LBRC   &kp RBRC  &kp PLUS      &trans   
 &trans    &kp HASH    &kp EXCL      &kp QMARK   &kp AMPS       &kp PIPE                        &none    &none    &none                &kp MINUS        &kp SQT          &kp LPAR   &kp RPAR  &double_colon &trans   
-&trans    &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT         &kp FSLH            &none                &none                         &kp UNDER        &kp STAR         &kp LBRC   &kp RBRC  &none         &trans   
+&trans    &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT         &kp FSLH            &none                &none                         &kp UNDER        &kp STAR         &kp LBKT   &kp RBKT  &none         &trans   
                                     &trans      &trans         &lt NAV SPACE                                                          &trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
