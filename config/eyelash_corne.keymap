@@ -96,7 +96,7 @@
             label = "TD_SHIFT_CAPS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp F>, <&mo NAV2>;
+            bindings = <&kp F>, <&sl NAV2>;
         };
         double_colon: double_colon {
             compatible = "zmk,behavior-macro";
