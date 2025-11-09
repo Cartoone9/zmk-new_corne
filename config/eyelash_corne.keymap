@@ -57,10 +57,10 @@
             bindings = <&kp ENTER>;
             layers = <0>;
         };
-        combo_df_fnpad {
+        combo_df_numpad {
             timeout-ms = <50>;
             key-positions = <16 17>; // D and F positions
-            bindings = <&mo FN>;
+            bindings = <&mo NUM>;
             layers = <0>;
         };
 //        combo_cv_fn {
@@ -69,10 +69,16 @@
 //            bindings = <&mo FN>;
 //            layers = <0>;
 //        };
-        combo_sdf_nav2 {
+        combo_sdf_fn {
             timeout-ms = <50>;
             key-positions = <15 16 17>; // S, D and F positions
-            bindings = <&mo NAV2>;
+            bindings = <&mo FN>;
+            layers = <0>;
+        };
+        combo_asdf_nav2 {
+            timeout-ms = <50>;
+            key-positions = <14 15 16 17>; // A, S, D and F positions
+            bindings = <&mo FN>;
             layers = <0>;
         };
         combo_zx_blt {
@@ -364,7 +370,7 @@
             display-name = "BASE";
             bindings = <
 &kp DEL    &kp Q     &kp W      &kp E     &kp R			&kp T                                  &none                       &kp Y           &kp U        &kp I      &kp O    &kp P       &big_menu
-&kp TAB    &kp A     &kp S      &kp D     &lt NUM F		&kp G                           &none  &none    &none              &kp H           &kp J        &kp K      &kp L    &kp COLON   &kp HOME
+&kp TAB    &kp A     &kp S      &kp D     &kp F			&kp G                           &none  &none    &none              &kp H           &kp J        &kp K      &kp L    &kp COLON   &kp HOME
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V			&kp B            &none                 &none                       &kp N           &kp M        &kp COMMA  &kp DOT  &kp SEMI    &kp END
                                 &kp LGUI  &shift_caps   &lt EXTRA SPACE                                                    &lt CODE BSPC   &alt_bspc    &kp LALT
             >;
