@@ -93,7 +93,7 @@
         };
         f_nav2: f_nav2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_CAPS";
+            label = "TD_F_NAV2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F>, <&sl NAV2>;
