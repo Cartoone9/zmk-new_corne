@@ -78,7 +78,7 @@
         combo_asdf_nav2 {
             timeout-ms = <50>;
             key-positions = <14 15 16 17>; // A, S, D and F positions
-            bindings = <&mo FN>;
+            bindings = <&mo NAV2>;
             layers = <0>;
         };
         combo_zx_blt {
