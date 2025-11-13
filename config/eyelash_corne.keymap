@@ -285,6 +285,14 @@
                 <&macro_tap &kp K>,
                 <&macro_release &kp LGUI>;
         };
+        shift_tab: shift_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings = <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LSHIFT>;
+        };
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -402,7 +410,7 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &none     &kp TAB   &kp LALT   &none      &none     &none
+&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &maj_tab  &kp TAB   &kp LALT   &none      &none     &none
 &none     &none       &desk_1    &desk_2    &desk_3    &desk_4                          &none  &none    &none          &alt_left &alt_w    &alt_enter &alt_right &none     &none
 &none     &none       &none      &none      &none      &none                 &none             &none                   &none     &none     &none      &none      &none     &none
                                  &none      &none      &none                                                           &none     &none     &none
