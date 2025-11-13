@@ -155,7 +155,7 @@ layers:
   - '&mv_desk_3'
   - '&mv_desk_4'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&maj_tab'
   - $$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
