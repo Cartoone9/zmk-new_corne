@@ -410,9 +410,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &maj_tab  &kp TAB   &kp LALT   &none      &none     &none
-&none     &none       &desk_1    &desk_2    &desk_3    &desk_4                          &none  &none    &none          &alt_left &alt_w    &alt_enter &alt_right &none     &none
-&none     &none       &none      &none      &none      &none                 &none             &none                   &none     &none     &none      &none      &none     &none
+&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &shift_tab  &kp TAB   &kp LALT   &none      &none     &none
+&none     &none       &desk_1    &desk_2    &desk_3    &desk_4                          &none  &none    &none          &alt_left   &alt_w    &alt_enter &alt_right &none     &none
+&none     &none       &none      &none      &none      &none                 &none             &none                   &none       &none     &none      &none      &none     &none
                                  &none      &none      &none                                                           &none     &none     &none
             >;
             sensor-bindings = <&scroll_encoder>;
