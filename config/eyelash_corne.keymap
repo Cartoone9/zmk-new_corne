@@ -87,9 +87,9 @@
             bindings = <&mo NAV2>;
             layers = <0>;
         };
-        combo_zx_blt {
+        combo_slash_end_blt {
             timeout-ms = <50>;
-            key-positions = <40 41>; // Z and X positions
+            key-positions = <40 41>; // / (right of DOT) and END positions
             bindings = <&mo BLT>;
             layers = <0>;
         };
