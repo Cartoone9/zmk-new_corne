@@ -5,10 +5,10 @@ manifest:
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
-      revision: main
+      revision: 114cdf921ab2f3955c07f447423851be61e774bf  # upstream state at my last working build, before the shield refactor
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0  # last ZMK release on Zephyr 3.5, the combo upstream used with this board
       import: app/west.yml
   self:
     path: config
