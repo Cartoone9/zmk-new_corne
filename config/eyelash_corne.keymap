@@ -43,6 +43,15 @@
 };
 
 / {
+    // Hold both thumbs (EXTRA + CODE) to get NAV
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <EXTRA CODE>;
+            then-layer = <NAV>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_kj_esc {
@@ -188,8 +197,8 @@
             bindings = <
 &trans    &kp TILDE   &kp LT        &kp GT      &kp PERCENT    &kp BSLH                                 &none                   &kp PLUS         &kp DQT      &kp LBRC   &kp RBRC  &kp COLON     &trans   
 &trans    &kp HASH    &kp EXCL      &kp EQUAL   &kp AMPS       &kp PIPE                        &none    &none    &none          &kp MINUS        &kp SQT      &kp LPAR   &kp RPAR  &trans        &trans   
-&trans    &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT         &kp QMARK           &none                &none                   &kp UNDER        &kp STAR     &kp LBKT   &kp RBKT  &none         &trans   
-                                    &trans      &trans         &lt NAV SPACE                                                    &trans           &trans       &trans
+&trans    &kp GRAVE   &kp CARET     &kp DOLLAR  &kp AT         &kp QMARK           &none                &none                   &kp UNDER        &kp STAR     &kp LBKT   &kp RBKT  &trans        &trans   
+                                    &trans      &trans         &trans                                                   &trans           &trans       &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -200,7 +209,7 @@
 &none     &none            &kp C_BRI_DN	 &kp C_BRI_UP   &none           &none                                   &none                 &kp K_LOCK	   &kp PGDN    &kp PGUP  &kp PSCRN  &none	  &trans
 &none     &kp LGUI	   &kp LALT      &kp LSHIFT     &kp LCTRL       &none                          &none    &none    &none        &kp LEFT  	   &kp DOWN    &kp UP    &kp RIGHT  &none      &trans
 &trans    &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PP        &kp C_NEXT		&none				    &none				  &kp F18   	   &kp F19     &kp F20   &kp F21    &kp F22    &trans
-									     &trans		    &trans          &trans														  &lt NAV BSPC     &trans      &trans
+									     &trans		    &trans          &trans														  &trans    &trans      &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
