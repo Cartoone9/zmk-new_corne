@@ -111,49 +111,7 @@
             bindings = <&kp F>, <&sl NAV2>;
         };
 
-        // big menu
-        big_menu: big_menu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp SPACE>,
-                <&macro_release &kp LALT>;
-        };
-
         // desktop shortcuts
-        desk_1: desk_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp N1>,
-                <&macro_release &kp LALT>;
-        };
-        desk_2: desk_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp N2>,
-                <&macro_release &kp LALT>;
-        };    
-        desk_3: desk_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp N3>,
-                <&macro_release &kp LALT>;
-        };    
-        desk_4: desk_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp N4>,
-                <&macro_release &kp LALT>;
-        };    
         desk_5: desk_5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -162,183 +120,13 @@
                 <&macro_tap &kp N5>,
                 <&macro_release &kp LALT>;
         };
-		mv_desk_1: mv_desk_1 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <50>;
-			bindings = <&macro_press &kp LALT>,
-				<&macro_press &kp LSHIFT>,
-				<&macro_tap &kp N1>,
-				<&macro_release &kp LSHIFT>,
-				<&macro_release &kp LALT>;
-		};
-		mv_desk_2: mv_desk_2 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <50>;
-			bindings = <&macro_press &kp LALT>,
-				<&macro_press &kp LSHIFT>,
-				<&macro_tap &kp N2>,
-				<&macro_release &kp LSHIFT>,
-				<&macro_release &kp LALT>;
-		};
-		mv_desk_3: mv_desk_3 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <50>;
-			bindings = <&macro_press &kp LALT>,
-				<&macro_press &kp LSHIFT>,
-				<&macro_tap &kp N3>,
-				<&macro_release &kp LSHIFT>,
-				<&macro_release &kp LALT>;
-		};
-		mv_desk_4: mv_desk_4 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <50>;
-			bindings = <&macro_press &kp LALT>,
-				<&macro_press &kp LSHIFT>,
-				<&macro_tap &kp N4>,
-				<&macro_release &kp LSHIFT>,
-				<&macro_release &kp LALT>;
-		};
 
-        win_enter: win_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp ENTER>,
-                <&macro_release &kp LGUI>;
-        };
-        win_s_enter: win_s_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-				<&macro_press &kp LSHIFT>,
-                <&macro_tap &kp ENTER>,
-                <&macro_release &kp LSHIFT>,
-                <&macro_release &kp LGUI>;
-        };
-        win_up: win_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp UP>,
-                <&macro_release &kp LGUI>;
-        };
-        win_right: win_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp RIGHT>,
-                <&macro_release &kp LGUI>;
-        };
-        win_down: win_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp DOWN>,
-                <&macro_release &kp LGUI>;
-        };
-        win_left: win_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp LEFT>,
-                <&macro_release &kp LGUI>;
-        };
-        win_U: win_U {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp U>,
-                <&macro_release &kp LGUI>;
-        };
-        win_I: win_I {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp I>,
-                <&macro_release &kp LGUI>;
-        };
-        win_J: win_J {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp J>,
-                <&macro_release &kp LGUI>;
-        };
-        win_K: win_K {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LGUI>,
-                <&macro_tap &kp K>,
-                <&macro_release &kp LGUI>;
-        };
-        shift_tab: shift_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LSHIFT>,
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LSHIFT>;
-        };
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
             bindings = <&macro_press &kp LALT>,
                 <&macro_tap &kp TAB>,
-                <&macro_release &kp LALT>;
-        };
-        alt_left: alt_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp LEFT>,
-                <&macro_release &kp LALT>;
-        };
-        alt_right: alt_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp RIGHT>,
-                <&macro_release &kp LALT>;
-        };
-        alt_enter: alt_enter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp ENTER>,
-                <&macro_release &kp LALT>;
-        };
-        alt_w: alt_w {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp W>,
-                <&macro_release &kp LALT>;
-        };
-        alt_bspc: alt_bspc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            bindings = <&macro_press &kp LALT>,
-                <&macro_tap &kp BSPC>,
                 <&macro_release &kp LALT>;
         };
         ctrl_bspc: ctrl_bspc {
@@ -377,10 +165,10 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-&kp DEL    &kp Q     &kp W      &kp E     &kp R			&kp T                                  &none                       &kp Y           &kp U        &kp I      &kp O    &kp P       &big_menu
+&kp DEL    &kp Q     &kp W      &kp E     &kp R			&kp T                                  &none                       &kp Y           &kp U        &kp I      &kp O    &kp P       &kp LA(SPACE)
 &kp TAB    &kp A     &kp S      &kp D     &kp F			&kp G                           &none  &none    &none              &kp H           &kp J        &kp K      &kp L    &kp SEMI    &kp HOME
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V			&kp B            &none                 &none                       &kp N           &kp M        &kp COMMA  &kp DOT  &kp FSLH    &kp END
-                                &kp LGUI  &shift_caps   &lt EXTRA SPACE                                                    &lt CODE BSPC   &alt_bspc    &kp LALT
+                                &kp LGUI  &shift_caps   &lt EXTRA SPACE                                                    &lt CODE BSPC   &kp LA(BSPC) &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -410,10 +198,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &mv_desk_1 &mv_desk_2 &mv_desk_3 &mv_desk_4                              &none                   &shift_tab  &kp TAB   &kp LALT   &none      &none     &none
-&none     &none       &desk_1    &desk_2    &desk_3    &desk_4                          &none  &none    &none          &alt_left   &alt_w    &alt_enter &alt_right &none     &none
-&none     &none       &none      &none      &none      &none                 &none             &none                   &none       &none     &none      &none      &none     &none
-                                 &none      &none      &none                                                           &none     &none     &none
+&none     &none       &kp LA(LS(N1))  &kp LA(LS(N2))  &kp LA(LS(N3))  &kp LA(LS(N4))                          &none                   &kp LS(TAB)    &kp TAB     &kp LALT       &none          &none     &none
+&none     &none       &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)                       &none  &none    &none          &kp LA(LEFT)   &kp LA(W)   &kp LA(ENTER)  &kp LA(RIGHT)  &none     &none
+&none     &none       &none           &none           &none           &none                 &none             &none                   &none          &none       &none          &none          &none     &none
+                                      &none           &none           &none                                                           &none          &none       &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -421,9 +209,9 @@
         nav2_layer {
             display-name = "NAV2";
             bindings = <
-&none     &none     &none      &none      &none       &none                           &none                   &none         &win_U        &win_enter    &win_I         &none      &none
-&none     &none     &none      &none      &none       &none                    &none  &none    &none          &win_left     &win_down     &win_up       &win_right     &none      &none
-&none     &none     &none      &none      &none       &none         &none             &none                   &none         &win_J        &win_s_enter  &win_K         &none      &none
+&none     &none     &none      &none      &none       &none                           &none                   &none         &kp LG(U)     &kp LG(ENTER)      &kp LG(I)      &none      &none
+&none     &none     &none      &none      &none       &none                    &none  &none    &none          &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)         &kp LG(RIGHT)  &none      &none
+&none     &none     &none      &none      &none       &none         &none             &none                   &none         &kp LG(J)     &kp LG(LS(ENTER))  &kp LG(K)      &none      &none
                                &none      &none       &none                                                   &none         &none         &none
             >;
             sensor-bindings = <&scroll_encoder>;
