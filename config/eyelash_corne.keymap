@@ -217,7 +217,7 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &kp LA(LS(S)) &kp LA(LS(N1))  &kp LA(LS(N2))  &kp LA(LS(N3))  &kp LA(LS(N4))                          &none                   &kp LA(Q)      &kp LA(W)   &kp LA(N)      &none          &none     &none
+&none     &kp LA(LS(S)) &kp LA(LS(N1))  &kp LA(LS(N2))  &kp LA(LS(N3))  &kp LA(LS(N4))                          &none                   &kp LA(Q)      &kp LA(W)   &kp LA(N)      &kp LA(F)      &none     &none
 &none     &kp LA(S)   &kp LA(N1)     &kp LA(N2)      &kp LA(N3)      &kp LA(N4)                       &none  &none    &none          &kp LA(H)      &kp LA(J)   &kp LA(K)      &kp LA(L)      &none     &none
 &none     &none       &none           &none           &none           &none                 &none             &none                   &kp LS(TAB)    &kp TAB     &kp LALT       &none          &none     &none
                                       &trans          &trans          &trans                                                          &trans         &trans      &trans

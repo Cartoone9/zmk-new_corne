@@ -129,6 +129,7 @@ parse_config:
     "&kp LA(W)": Close
     "&kp LA(Q)": Quit
     "&kp LA(N)": New window
+    "&kp LA(F)": Focus full
     "&kp LS(TAB)": "⇤ Tab"
 
     # MOV_WIN (C+V)
