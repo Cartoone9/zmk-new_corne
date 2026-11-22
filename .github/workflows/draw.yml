@@ -16,3 +16,5 @@ jobs:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       destination: "commit"
       fail_on_error: ${{ fromJSON(true) }}
+      # Draw the 5-way joystick (6, 19, 20, 21, 35) and position 34 as ghost keys
+      draw_args: "eyelash_corne:'-g 6 19 20 21 34 35'"
