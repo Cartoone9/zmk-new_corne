@@ -15,10 +15,10 @@
 #define CODE    1
 #define EXTRA   2
 #define NAV     3
-#define NAV2    4
+#define MOV_WIN 4
 #define NUM     5
 #define FN      6
-#define BLT     7
+#define BOARD   7
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -84,16 +84,16 @@
             bindings = <&mo FN>;
             layers = <0>;
         };
-        combo_asdf_nav2 {
+        combo_cv_mov_win {
             timeout-ms = <50>;
-            key-positions = <14 15 16 17>; // A, S, D and F positions
-            bindings = <&mo NAV2>;
+            key-positions = <31 32>; // C and V positions
+            bindings = <&mo MOV_WIN>;
             layers = <0>;
         };
-        combo_slash_end_blt {
+        combo_slash_end_board {
             timeout-ms = <50>;
             key-positions = <40 41>; // / (right of DOT) and END positions
-            bindings = <&mo BLT>;
+            bindings = <&mo BOARD>;
             layers = <0>;
         };
     };
@@ -127,7 +127,7 @@
             label = "TD_F_NAV2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp F>, <&sl NAV2>;
+            bindings = <&kp F>, <&sl MOV_WIN>;
         };
 
         // desktop shortcuts
@@ -187,7 +187,7 @@
 &kp DEL    &kp Q     &kp W      &kp E     &kp R			&kp T                                  &none                       &kp Y           &kp U        &kp I      &kp O    &kp P       &kp LA(SPACE)
 &kp TAB    &kp A     &kp S      &kp D     &kp F			&kp G                           &none  &none    &none              &kp H           &kp J        &kp K      &kp L    &kp SEMI    &kp HOME
 &kp LCTRL  &kp Z     &kp X      &kp C     &kp V			&kp B            &none                 &none                       &kp N           &kp M        &kp COMMA  &kp DOT  &kp FSLH    &kp END
-                                &kp LGUI  &shift_caps   &lt EXTRA SPACE                                                    &lt_bspc CODE 0 &kp ENTER    &kp LALT
+                                &kp LGUI  &shift_caps   &lt EXTRA SPACE                                                &lt_bspc CODE 0 &kp ENTER    &kp LALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -208,7 +208,7 @@
             bindings = <
 &none     &none            &kp C_BRI_DN	 &kp C_BRI_UP   &none           &none                                   &none                 &kp K_LOCK	   &kp PGDN    &kp PGUP  &kp PSCRN  &none	  &trans
 &none     &kp LGUI	   &kp LALT      &kp LSHIFT     &kp LCTRL       &none                          &none    &none    &none        &kp LEFT  	   &kp DOWN    &kp UP    &kp RIGHT  &none      &trans
-&trans    &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PP        &kp C_NEXT		&none				    &none				  &kp F18   	   &kp F19     &kp F20   &kp F21    &kp F22    &trans
+&trans    &kp C_MUTE       &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PP        &kp C_NEXT		&none				    &none				  &kp F18  	   &kp F19     &kp F20   &kp F21    &kp F22    &trans
 									     &trans		    &trans          &trans														  &trans    &trans      &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -217,16 +217,16 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&none     &none       &kp LA(LS(N1))  &kp LA(LS(N2))  &kp LA(LS(N3))  &kp LA(LS(N4))                          &none                   &kp LS(TAB)    &kp TAB     &kp LALT       &none          &none     &none
-&none     &none       &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)                       &none  &none    &none          &kp LA(LEFT)   &kp LA(W)   &kp LA(ENTER)  &kp LA(RIGHT)  &none     &none
-&none     &none       &none           &none           &none           &none                 &none             &none                   &none          &none       &none          &none          &none     &none
-                                      &none           &none           &none                                                           &none          &none       &none
+&none     &kp LA(LS(S)) &kp LA(LS(N1))  &kp LA(LS(N2))  &kp LA(LS(N3))  &kp LA(LS(N4))                          &none                   &kp LA(Q)      &kp LA(W)   &kp LA(N)      &none          &none     &none
+&none     &kp LA(S)   &kp LA(N1)     &kp LA(N2)      &kp LA(N3)      &kp LA(N4)                       &none  &none    &none          &kp LA(H)      &kp LA(J)   &kp LA(K)      &kp LA(L)      &none     &none
+&none     &none       &none           &none           &none           &none                 &none             &none                   &kp LS(TAB)    &kp TAB     &kp LALT       &none          &none     &none
+                                      &trans          &trans          &trans                                                          &trans         &trans      &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
 
-        nav2_layer {
-            display-name = "NAV2";
+        mov_win_layer {
+            display-name = "MOV_WIN";
             bindings = <
 &none     &none     &none      &none      &none       &none                           &none                   &none         &kp LG(U)     &kp LG(ENTER)      &kp LG(I)      &none      &none
 &none     &none     &none      &none      &none       &none                    &none  &none    &none          &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)         &kp LG(RIGHT)  &none      &none
@@ -239,7 +239,7 @@
         numpad_layer {
             display-name = "NUM";
             bindings = <
-&none     &none     &none      &none      &none       &none                              &none					&kp FSLH    &kp N7     &kp N8     &kp N9     &kp PLUS   &none
+&none     &none     &none      &none      &none       &none                              &none					&kp PLUS    &kp N7     &kp N8     &kp N9     &kp FSLH   &none
 &none     &none     &none      &none      &none       &none                     &none    &none    &none         &kp MINUS	&kp N4     &kp N5     &kp N6     &kp STAR   &none
 &none     &none     &none      &none      &none       &none            &none             &none					&kp N0      &kp N1     &kp N2     &kp N3     &kp DOT    &none
                                &none      &none       &none                                                     &kp BSPC    &trans     &trans
@@ -258,8 +258,8 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        blt_layer {
-            display-name = "BLT";
+        board_layer {
+            display-name = "BOARD";
             bindings = <
 &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_BRI    &rgb_ug RGB_BRD                  &none                    &rgb_ug RGB_HUI       &rgb_ug RGB_HUD         &rgb_ug RGB_SAI        &rgb_ug RGB_SAD       &none     &none
 &none    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                    &bt BT_SEL 3       &bt BT_SEL 4             &none   &none    &none           &none       &none         &none        &none       &none     &none
